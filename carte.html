@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La carte | Sicilia</title>
+    <meta name="description" content="Découvrez les spécialités, plats et boissons de Sicilia.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-sicilia-black text-sicilia-ivory font-sans selection:bg-sicilia-bronze selection:text-sicilia-ivory overflow-x-hidden">
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 px-6 lg:px-12 border-b border-white/0">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="group flex items-center gap-3">
+                <div class="w-9 h-12 border-t-2 border-l-2 border-r-2 border-sicilia-copper rounded-t-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <span class="font-serif text-sicilia-copper font-bold text-xs tracking-wider">S</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">SICILIA</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-sicilia-copper/80 font-light">Ristorante & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase">
+                <a href="histoire.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Notre Histoire</a>
+                <a href="cadre.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Le Cadre</a>
+                <a href="carte.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">La Carte</a>
+                <a href="galerie.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Galerie</a>
+                <a href="acces.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Accès</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="reservation.html" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-sicilia-copper hover:bg-sicilia-bronze text-sicilia-black hover:text-sicilia-ivory transition-all duration-300 shadow-lg shadow-sicilia-copper/10 transform hover:-translate-y-0.5">
+                    <i class="fa-regular font-normal fa-calendar-check mr-2 text-sm"></i>
+                    <span>Réserver</span>
+                </a>
+
+                <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-sicilia-ivory focus:outline-none">
+                    <span class="w-6 h-0.5 bg-sicilia-copper transition-all duration-300 transform" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-sicilia-ivory transition-all duration-300" id="line2"></span>
+                    <span class="w-4 h-0.5 bg-sicilia-copper transition-all duration-300 self-end mr-2" id="line3"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-[73px] bg-sicilia-black/98 backdrop-blur-xl z-40 border-t border-sicilia-grayDark/50 flex flex-col justify-between p-8 transition-opacity duration-300 opacity-0">
+            <nav class="flex flex-col space-y-6 text-center pt-8">
+                <a href="histoire.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Notre Histoire</a>
+                <a href="cadre.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Le Cadre Architectural</a>
+                <a href="carte.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">La Carte & Spécialités</a>
+                <a href="galerie.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Galerie Photos</a>
+                <a href="acces.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Contact & Localisation</a>
+            </nav>
+
+            <div class="space-y-4 pt-6 border-t border-sicilia-grayDark/40">
+                <a href="reservation.html" class="mobile-nav-link w-full py-3.5 rounded-full text-center text-xs font-semibold tracking-widest uppercase bg-sicilia-copper text-sicilia-black block">
+                    Réserver une Table
+                </a>
+                <p class="text-center text-xs text-sicilia-gray tracking-wider">L'art de la haute table contemporaine</p>
+            </div>
+        </div>
+    </header>
+<main>
+<section id="menu" class="py-24 px-6 bg-sicilia-black relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-sicilia-grayDark/60 pb-8">
+                <div>
+                    <span class="text-xs tracking-[0.25em] uppercase text-sicilia-copper font-medium block mb-2">Plaisirs Culinaires</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold text-sicilia-ivory">La Carte & Spécialités</h1>
+                </div>
+                
+                <!-- Notice Badge for Unconfirmed Details as per specs -->
+                <div class="mt-4 md:mt-0 flex items-center gap-2 bg-sicilia-darkCard px-3.5 py-2 rounded-lg border border-sicilia-copper/20 text-[11px] text-sicilia-ivoryMuted">
+                    <i class="fa-solid fa-circle-info text-sicilia-copper"></i>
+                    <span>Propositions de démonstration — Carte définitive à confirmer avec l'établissement</span>
+                </div>
+            </div>
+
+            <!-- Filter Buttons Tabs -->
+            <div class="flex flex-wrap items-center gap-3 mb-12" id="menu-filters">
+                <button data-category="all" class="menu-tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-sicilia-copper text-sicilia-black">
+                    Tous les plats
+                </button>
+                <button data-category="starters" class="menu-tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-sicilia-darkCard text-sicilia-ivoryMuted hover:text-sicilia-ivory border border-sicilia-grayDark">
+                    Entrées Raffinées
+                </button>
+                <button data-category="mains" class="menu-tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-sicilia-darkCard text-sicilia-ivoryMuted hover:text-sicilia-ivory border border-sicilia-grayDark">
+                    Plats Signature
+                </button>
+                <button data-category="desserts" class="menu-tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-sicilia-darkCard text-sicilia-ivoryMuted hover:text-sicilia-ivory border border-sicilia-grayDark">
+                    Desserts Gourmands
+                </button>
+                <button data-category="drinks" class="menu-tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-sicilia-darkCard text-sicilia-ivoryMuted hover:text-sicilia-ivory border border-sicilia-grayDark">
+                    Vins & Cocktails
+                </button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu-grid">
+                
+                <!-- Item 1: Starter -->
+                <div class="menu-item bg-sicilia-darkCard p-6 rounded-2xl border border-sicilia-grayDark/80 hover:border-sicilia-copper/40 transition-all duration-300 flex flex-col sm:flex-row gap-5 group" data-category="starters">
+                    <div class="w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80" alt="Carpaccio de thon" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-sicilia-black/80 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] uppercase font-bold text-sicilia-copper">Entrée</span>
+                    </div>
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h3 class="font-serif text-lg font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">Carpaccio de Thon aux Agrumes</h3>
+                                <span class="text-sm font-semibold text-sicilia-copper font-serif">À confirmer</span>
+                            </div>
+                            <p class="text-xs text-sicilia-gray leading-relaxed mb-3">
+                                Fine tranche de thon rouge frais, huile d'olive pimentée, segments d'oranges de Sicile et câpres d'Azienda.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-sicilia-grayDark/50 pt-2">
+                            <span class="text-[10px] text-sicilia-ivoryMuted uppercase tracking-wider"><i class="fa-solid fa-wheat-awn text-sicilia-copper mr-1"></i> Fraîcheur marine</span>
+                            <button class="view-dish-modal text-xs text-sicilia-copper font-semibold hover:underline" data-title="Carpaccio de Thon aux Agrumes" data-desc="Fine tranche de thon rouge frais, huile d'olive pimentée, segments d'oranges de Sicile et câpres. Préparation artisanale à la commande." data-img="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80">
+                                Détails <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Main -->
+                <div class="menu-item bg-sicilia-darkCard p-6 rounded-2xl border border-sicilia-grayDark/80 hover:border-sicilia-copper/40 transition-all duration-300 flex flex-col sm:flex-row gap-5 group" data-category="mains">
+                    <div class="w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Filet de Bœuf Grillé" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-sicilia-black/80 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] uppercase font-bold text-sicilia-copper">Signature</span>
+                    </div>
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h3 class="font-serif text-lg font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">Filet de Bœuf & Jus au Romarin</h3>
+                                <span class="text-sm font-semibold text-sicilia-copper font-serif">À confirmer</span>
+                            </div>
+                            <p class="text-xs text-sicilia-gray leading-relaxed mb-3">
+                                Pièce de bœuf sélectionnée, purée crémeuse infusée à l'ail doux, légumes de saison saisis au beurre de sauge.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-sicilia-grayDark/50 pt-2">
+                            <span class="text-[10px] text-sicilia-ivoryMuted uppercase tracking-wider"><i class="fa-solid fa-fire text-sicilia-copper mr-1"></i> Cuisson braisée</span>
+                            <button class="view-dish-modal text-xs text-sicilia-copper font-semibold hover:underline" data-title="Filet de Bœuf & Jus au Romarin" data-desc="Pièce de bœuf sélectionnée, purée crémeuse infusée à l'ail doux, légumes de saison saisis au beurre de sauge." data-img="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80">
+                                Détails <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Main Pasta -->
+                <div class="menu-item bg-sicilia-darkCard p-6 rounded-2xl border border-sicilia-grayDark/80 hover:border-sicilia-copper/40 transition-all duration-300 flex flex-col sm:flex-row gap-5 group" data-category="mains">
+                    <div class="w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=500&q=80" alt="Pâtes Artisanales" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-sicilia-black/80 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] uppercase font-bold text-sicilia-copper">Plat</span>
+                    </div>
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h3 class="font-serif text-lg font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">Rigatoni à la Pistache & Guanciale</h3>
+                                <span class="text-sm font-semibold text-sicilia-copper font-serif">À confirmer</span>
+                            </div>
+                            <p class="text-xs text-sicilia-gray leading-relaxed mb-3">
+                                Pâtes fraîches fabriquées sur place, crème de pistaches de Bronte, guanciale croustillant et pecorino affiné.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-sicilia-grayDark/50 pt-2">
+                            <span class="text-[10px] text-sicilia-ivoryMuted uppercase tracking-wider"><i class="fa-solid fa-star text-sicilia-copper mr-1"></i> Recette Fait Maison</span>
+                            <button class="view-dish-modal text-xs text-sicilia-copper font-semibold hover:underline" data-title="Rigatoni à la Pistache & Guanciale" data-desc="Pâtes fraîches fabriquées sur place, crème de pistaches de Bronte, guanciale croustillant et pecorino affiné." data-img="https://images.unsplash.com/photo-1621996346565-e3d5d6281288?auto=format&fit=crop&w=800&q=80">
+                                Détails <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Dessert -->
+                <div class="menu-item bg-sicilia-darkCard p-6 rounded-2xl border border-sicilia-grayDark/80 hover:border-sicilia-copper/40 transition-all duration-300 flex flex-col sm:flex-row gap-5 group" data-category="desserts">
+                    <div class="w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&q=80" alt="Tiramisu traditionnel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-sicilia-black/80 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] uppercase font-bold text-sicilia-copper">Dessert</span>
+                    </div>
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h3 class="font-serif text-lg font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">Tiramisu Onctueux au Café Espresso</h3>
+                                <span class="text-sm font-semibold text-sicilia-copper font-serif">À confirmer</span>
+                            </div>
+                            <p class="text-xs text-sicilia-gray leading-relaxed mb-3">
+                                Mascarpone léger, biscuits imbibés d'espresso corsé et poudre de cacao amer grand cru.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-sicilia-grayDark/50 pt-2">
+                            <span class="text-[10px] text-sicilia-ivoryMuted uppercase tracking-wider"><i class="fa-solid fa-stroopwafel text-sicilia-copper mr-1"></i> Gourmandise</span>
+                            <button class="view-dish-modal text-xs text-sicilia-copper font-semibold hover:underline" data-title="Tiramisu Onctueux au Café Espresso" data-desc="Mascarpone léger, biscuits imbibés d'espresso corsé et poudre de cacao amer grand cru." data-img="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80">
+                                Détails <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Cocktail -->
+                <div class="menu-item bg-sicilia-darkCard p-6 rounded-2xl border border-sicilia-grayDark/80 hover:border-sicilia-copper/40 transition-all duration-300 flex flex-col sm:flex-row gap-5 group" data-category="drinks">
+                    <div class="w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=500&q=80" alt="Cocktail Signature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-sicilia-black/80 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] uppercase font-bold text-sicilia-copper">Cocktail</span>
+                    </div>
+                    <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h3 class="font-serif text-lg font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">Spritz Réinventé au Sanguin</h3>
+                                <span class="text-sm font-semibold text-sicilia-copper font-serif">À confirmer</span>
+                            </div>
+                            <p class="text-xs text-sicilia-gray leading-relaxed mb-3">
+                                Prosecco supérieur, liqueur d'oranges amères, jus d'oranges sanguines de Sicile et brin de romarin frais.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-sicilia-grayDark/50 pt-2">
+                            <span class="text-[10px] text-sicilia-ivoryMuted uppercase tracking-wider"><i class="fa-solid fa-wine-glass text-sicilia-copper mr-1"></i> Mixologie</span>
+                            <button class="view-dish-modal text-xs text-sicilia-copper font-semibold hover:underline" data-title="Spritz Réinventé au Sanguin" data-desc="Prosecco supérieur, liqueur d'oranges amères, jus d'oranges sanguines de Sicile et brin de romarin frais." data-img="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80">
+                                Détails <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer class="bg-sicilia-black border-t border-sicilia-grayDark/60 pt-16 pb-12 px-6 text-sicilia-gray">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-sicilia-grayDark/40">
+                
+                <div class="md:col-span-5">
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory">SICILIA</span>
+                    </a>
+                    <p class="text-xs leading-relaxed max-w-sm mb-6">
+                        Une expérience culinaire dans un cadre contemporain et chaleureux, sublimée par une architecture d'exception.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-whatsapp text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="histoire.html" class="hover:text-sicilia-copper transition-colors">Notre Histoire</a></li>
+                        <li><a href="cadre.html" class="hover:text-sicilia-copper transition-colors">Cadre & Architecture</a></li>
+                        <li><a href="carte.html" class="hover:text-sicilia-copper transition-colors">La Carte du Restaurant</a></li>
+                        <li><a href="galerie.html" class="hover:text-sicilia-copper transition-colors">Galerie de Photos</a></li>
+                        <li><a href="reservation.html" class="hover:text-sicilia-copper transition-colors">Réservation en Ligne</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Mentions de Prototype NEXID</h4>
+                    <p class="text-[11px] leading-relaxed mb-3">
+                        Ce site web constitue un prototype de présentation développé par <strong class="text-sicilia-copper">NEXID — Nouvelle Identité</strong>.
+                    </p>
+                    <p class="text-[10px] text-sicilia-gray">
+                        Toutes les données informatives restent sujettes à confirmation officielle par le restaurant Sicilia.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+                <p>&copy; 2026 Sicilia Ristorante. Tous droits réservés.</p>
+                <p class="text-sicilia-copper">Conception & Démonstration : <span class="font-bold">NEXID</span></p>
+            </div>
+
+        </div>
+    </footer>
+<div id="dish-modal" class="fixed inset-0 z-50 hidden bg-sicilia-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-sicilia-darkCard border border-sicilia-copper/40 rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl relative">
+            <button id="close-dish-modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-sicilia-black/80 text-sicilia-ivory flex items-center justify-center z-10 hover:bg-sicilia-copper hover:text-sicilia-black transition-colors" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="h-64 relative">
+                <img id="modal-dish-img" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+                <h3 id="modal-dish-title" class="font-serif text-2xl font-bold text-sicilia-ivory mb-2"></h3>
+                <p id="modal-dish-desc" class="text-xs text-sicilia-ivoryMuted leading-relaxed mb-6"></p>
+                <a href="reservation.html" id="modal-reserve-btn" class="block w-full py-3 rounded-full bg-sicilia-copper text-sicilia-black font-semibold text-xs text-center uppercase tracking-wider">
+                    Réserver pour déguster ce plat
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

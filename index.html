@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicilia | Restaurant & Lounge</title>
+    <meta name="description" content="Découvrez Sicilia : une harmonie entre lignes contemporaines, textures cuivrées et gastronomie raffinée.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-sicilia-black text-sicilia-ivory font-sans selection:bg-sicilia-bronze selection:text-sicilia-ivory overflow-x-hidden">
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 px-6 lg:px-12 border-b border-white/0">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="group flex items-center gap-3">
+                <div class="w-9 h-12 border-t-2 border-l-2 border-r-2 border-sicilia-copper rounded-t-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <span class="font-serif text-sicilia-copper font-bold text-xs tracking-wider">S</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">SICILIA</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-sicilia-copper/80 font-light">Ristorante & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase">
+                <a href="histoire.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Notre Histoire</a>
+                <a href="cadre.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Le Cadre</a>
+                <a href="carte.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">La Carte</a>
+                <a href="galerie.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Galerie</a>
+                <a href="acces.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Accès</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="reservation.html" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-sicilia-copper hover:bg-sicilia-bronze text-sicilia-black hover:text-sicilia-ivory transition-all duration-300 shadow-lg shadow-sicilia-copper/10 transform hover:-translate-y-0.5">
+                    <i class="fa-regular font-normal fa-calendar-check mr-2 text-sm"></i>
+                    <span>Réserver</span>
+                </a>
+
+                <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-sicilia-ivory focus:outline-none">
+                    <span class="w-6 h-0.5 bg-sicilia-copper transition-all duration-300 transform" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-sicilia-ivory transition-all duration-300" id="line2"></span>
+                    <span class="w-4 h-0.5 bg-sicilia-copper transition-all duration-300 self-end mr-2" id="line3"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-[73px] bg-sicilia-black/98 backdrop-blur-xl z-40 border-t border-sicilia-grayDark/50 flex flex-col justify-between p-8 transition-opacity duration-300 opacity-0">
+            <nav class="flex flex-col space-y-6 text-center pt-8">
+                <a href="histoire.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Notre Histoire</a>
+                <a href="cadre.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Le Cadre Architectural</a>
+                <a href="carte.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">La Carte & Spécialités</a>
+                <a href="galerie.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Galerie Photos</a>
+                <a href="acces.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Contact & Localisation</a>
+            </nav>
+
+            <div class="space-y-4 pt-6 border-t border-sicilia-grayDark/40">
+                <a href="reservation.html" class="mobile-nav-link w-full py-3.5 rounded-full text-center text-xs font-semibold tracking-widest uppercase bg-sicilia-copper text-sicilia-black block">
+                    Réserver une Table
+                </a>
+                <p class="text-center text-xs text-sicilia-gray tracking-wider">L'art de la haute table contemporaine</p>
+            </div>
+        </div>
+    </header>
+<main>
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+        
+        <!-- Background Interior Photo & Slat Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85" 
+                 alt="Ambiance architecturale Sicilia" 
+                 class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.05] scale-105 transition-transform duration-1000 ease-out"
+                 id="hero-bg-img">
+            <div class="absolute inset-0 bg-gradient-to-t from-sicilia-black via-sicilia-black/50 to-sicilia-black/80"></div>
+            <!-- Vertical Architectural Slats Effect -->
+            <div class="absolute inset-0 bg-slat-pattern opacity-30 pointer-events-none"></div>
+        </div>
+
+        <!-- Hero Content Container -->
+        <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+            
+            <!-- Arch Motif Decorative Header -->
+            <div class="w-16 h-28 copper-arch mb-6 flex items-center justify-center bg-sicilia-black/40 backdrop-blur-sm opacity-0 transform translate-y-4 animate-fade-in" style="animation-delay: 200ms;">
+                <i class="fa-solid fa-utensils text-sicilia-copper text-sm"></i>
+            </div>
+
+            <!-- Subtitle badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sicilia-copper/30 bg-sicilia-black/60 backdrop-blur-md mb-6 opacity-0 animate-fade-in" style="animation-delay: 400ms;">
+                <span class="w-2 h-2 rounded-full bg-sicilia-copper animate-pulse"></span>
+                <span class="text-xs font-medium tracking-widest uppercase text-sicilia-ivoryMuted">Une Expérience Architecturale & Gastronomique</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-sicilia-ivory leading-[1.1] mb-6 opacity-0 animate-fade-in" style="animation-delay: 600ms;">
+                L'art de se retrouver <br>
+                <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-sicilia-ivory via-sicilia-copper to-sicilia-bronze">autour d'une table.</span>
+            </h1>
+
+            <!-- Editorial Description -->
+            <p class="max-w-2xl text-base sm:text-lg text-sicilia-ivoryMuted font-light leading-relaxed mb-10 opacity-0 animate-fade-in" style="animation-delay: 800ms;">
+                Découvrez Sicilia : une harmonie entre lignes contemporaines, textures cuivrées et gastronomie raffinée. Un cadre d'exception pensé pour éveiller chaque sens.
+            </p>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto opacity-0 animate-fade-in" style="animation-delay: 1000ms;">
+                <a href="carte.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sicilia-copper hover:bg-sicilia-bronze text-sicilia-black font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-sicilia-copper/20 text-center transform hover:-translate-y-1">
+                    Découvrir la Carte
+                </a>
+                <a href="reservation.html" class="w-full sm:w-auto px-8 py-4 rounded-full border border-sicilia-copper/50 hover:border-sicilia-copper bg-sicilia-black/40 hover:bg-sicilia-copper/10 text-sicilia-ivory font-semibold text-xs uppercase tracking-widest transition-all duration-300 backdrop-blur-sm text-center">
+                    Réserver une Table
+                </a>
+            </div>
+
+            <!-- Floating Scroll Indicator -->
+            <div class="mt-16 opacity-0 animate-fade-in" style="animation-delay: 1200ms;">
+                <a href="histoire.html" aria-label="Défiler vers le bas" class="inline-flex flex-col items-center text-sicilia-gray hover:text-sicilia-copper transition-colors">
+                    <span class="text-[10px] uppercase tracking-[0.2em] mb-2">Découvrir</span>
+                    <i class="fa-solid fa-chevron-down text-xs animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-sicilia-black border-t border-sicilia-grayDark/60 pt-16 pb-12 px-6 text-sicilia-gray">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-sicilia-grayDark/40">
+                
+                <div class="md:col-span-5">
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory">SICILIA</span>
+                    </a>
+                    <p class="text-xs leading-relaxed max-w-sm mb-6">
+                        Une expérience culinaire dans un cadre contemporain et chaleureux, sublimée par une architecture d'exception.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-whatsapp text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="histoire.html" class="hover:text-sicilia-copper transition-colors">Notre Histoire</a></li>
+                        <li><a href="cadre.html" class="hover:text-sicilia-copper transition-colors">Cadre & Architecture</a></li>
+                        <li><a href="carte.html" class="hover:text-sicilia-copper transition-colors">La Carte du Restaurant</a></li>
+                        <li><a href="galerie.html" class="hover:text-sicilia-copper transition-colors">Galerie de Photos</a></li>
+                        <li><a href="reservation.html" class="hover:text-sicilia-copper transition-colors">Réservation en Ligne</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Mentions de Prototype NEXID</h4>
+                    <p class="text-[11px] leading-relaxed mb-3">
+                        Ce site web constitue un prototype de présentation développé par <strong class="text-sicilia-copper">NEXID — Nouvelle Identité</strong>.
+                    </p>
+                    <p class="text-[10px] text-sicilia-gray">
+                        Toutes les données informatives restent sujettes à confirmation officielle par le restaurant Sicilia.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+                <p>&copy; 2026 Sicilia Ristorante. Tous droits réservés.</p>
+                <p class="text-sicilia-copper">Conception & Démonstration : <span class="font-bold">NEXID</span></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

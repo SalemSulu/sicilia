@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation | Sicilia</title>
+    <meta name="description" content="Demandez une réservation auprès de Sicilia.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-sicilia-black text-sicilia-ivory font-sans selection:bg-sicilia-bronze selection:text-sicilia-ivory overflow-x-hidden">
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 px-6 lg:px-12 border-b border-white/0">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="group flex items-center gap-3">
+                <div class="w-9 h-12 border-t-2 border-l-2 border-r-2 border-sicilia-copper rounded-t-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <span class="font-serif text-sicilia-copper font-bold text-xs tracking-wider">S</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory group-hover:text-sicilia-copper transition-colors">SICILIA</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-sicilia-copper/80 font-light">Ristorante & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase">
+                <a href="histoire.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Notre Histoire</a>
+                <a href="cadre.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Le Cadre</a>
+                <a href="carte.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">La Carte</a>
+                <a href="galerie.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Galerie</a>
+                <a href="acces.html" class="nav-link text-sicilia-ivoryMuted hover:text-sicilia-copper transition-colors relative py-1">Accès</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="reservation.html" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-sicilia-copper hover:bg-sicilia-bronze text-sicilia-black hover:text-sicilia-ivory transition-all duration-300 shadow-lg shadow-sicilia-copper/10 transform hover:-translate-y-0.5">
+                    <i class="fa-regular font-normal fa-calendar-check mr-2 text-sm"></i>
+                    <span>Réserver</span>
+                </a>
+
+                <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-sicilia-ivory focus:outline-none">
+                    <span class="w-6 h-0.5 bg-sicilia-copper transition-all duration-300 transform" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-sicilia-ivory transition-all duration-300" id="line2"></span>
+                    <span class="w-4 h-0.5 bg-sicilia-copper transition-all duration-300 self-end mr-2" id="line3"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-[73px] bg-sicilia-black/98 backdrop-blur-xl z-40 border-t border-sicilia-grayDark/50 flex flex-col justify-between p-8 transition-opacity duration-300 opacity-0">
+            <nav class="flex flex-col space-y-6 text-center pt-8">
+                <a href="histoire.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Notre Histoire</a>
+                <a href="cadre.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Le Cadre Architectural</a>
+                <a href="carte.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">La Carte & Spécialités</a>
+                <a href="galerie.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Galerie Photos</a>
+                <a href="acces.html" class="mobile-nav-link font-serif text-2xl text-sicilia-ivory hover:text-sicilia-copper transition-colors">Contact & Localisation</a>
+            </nav>
+
+            <div class="space-y-4 pt-6 border-t border-sicilia-grayDark/40">
+                <a href="reservation.html" class="mobile-nav-link w-full py-3.5 rounded-full text-center text-xs font-semibold tracking-widest uppercase bg-sicilia-copper text-sicilia-black block">
+                    Réserver une Table
+                </a>
+                <p class="text-center text-xs text-sicilia-gray tracking-wider">L'art de la haute table contemporaine</p>
+            </div>
+        </div>
+    </header>
+<main>
+<section id="reservation" class="py-24 px-6 bg-sicilia-black relative">
+        <div class="max-w-5xl mx-auto bg-sicilia-darkCard rounded-3xl border border-sicilia-copper/30 p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs tracking-[0.25em] uppercase text-sicilia-copper font-medium block mb-2">Demande de Table</span>
+                    <h1 class="font-serif text-3xl font-bold text-sicilia-ivory mb-4">Réservez votre Moment</h1>
+                    <p class="text-xs text-sicilia-ivoryMuted leading-relaxed mb-6">
+                        Complétez ce formulaire pour transmettre votre demande. Notre équipe prendra contact avec vous afin de confirmer la disponibilité de votre table.
+                    </p>
+
+                    <div class="space-y-4 pt-4 border-t border-sicilia-grayDark/60 text-xs text-sicilia-gray">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-sicilia-copper"></i>
+                            <span>Horaires de confirmation : 10h00 - 22h00</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-sicilia-copper"></i>
+                            <span>Téléphone officiel : À confirmer</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-sicilia-copper text-sm"></i>
+                            <span>Confirmation rapide via WhatsApp possible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <form id="booking-form" class="space-y-4" novalidate>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="res-name" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Nom complet *</label>
+                                <input type="text" id="res-name" required placeholder="Votre nom" class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-4 py-3 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors">
+                            </div>
+                            <div>
+                                <label for="res-phone" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Téléphone *</label>
+                                <input type="tel" id="res-phone" required placeholder="+33 6 00 00 00 00" class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-4 py-3 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label for="res-date" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Date souhaitée *</label>
+                                <input type="date" id="res-date" required class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-3 py-3 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors">
+                            </div>
+                            <div>
+                                <label for="res-time" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Heure *</label>
+                                <select id="res-time" required class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-3 py-3 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors">
+                                    <option value="">Choisir...</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="res-guests" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Couverts *</label>
+                                <select id="res-guests" required class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-3 py-3 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors">
+                                    <option value="1">1 personne</option>
+                                    <option value="2" selected>2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5+">5+ personnes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="res-notes" class="block text-[11px] uppercase tracking-wider text-sicilia-ivoryMuted mb-1.5">Demande particulière</label>
+                            <textarea id="res-notes" rows="2" placeholder="Allergies, terrasse, anniversaire..." class="w-full bg-sicilia-black border border-sicilia-grayDark rounded-xl px-4 py-2.5 text-xs text-sicilia-ivory focus:border-sicilia-copper transition-colors"></textarea>
+                        </div>
+
+                        <div id="form-feedback" class="hidden text-xs py-2 px-3 rounded-lg"></div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-sicilia-copper hover:bg-sicilia-bronze text-sicilia-black font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-lg shadow-sicilia-copper/20 flex items-center justify-center gap-2">
+                            <i class="fa-paper-plane fa-solid"></i>
+                            <span>Envoyer la demande de réservation</span>
+                        </button>
+                        
+                        <p class="text-[10px] text-center text-sicilia-gray">
+                            * Une demande envoyée ne vaut pas confirmation immédiate sans validation de notre équipe.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer class="bg-sicilia-black border-t border-sicilia-grayDark/60 pt-16 pb-12 px-6 text-sicilia-gray">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-sicilia-grayDark/40">
+                
+                <div class="md:col-span-5">
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <span class="font-serif text-2xl tracking-[0.2em] uppercase font-bold text-sicilia-ivory">SICILIA</span>
+                    </a>
+                    <p class="text-xs leading-relaxed max-w-sm mb-6">
+                        Une expérience culinaire dans un cadre contemporain et chaleureux, sublimée par une architecture d'exception.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-sicilia-darkCard border border-sicilia-grayDark flex items-center justify-center text-sicilia-copper hover:border-sicilia-copper transition-colors">
+                            <i class="fa-brands fa-whatsapp text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="histoire.html" class="hover:text-sicilia-copper transition-colors">Notre Histoire</a></li>
+                        <li><a href="cadre.html" class="hover:text-sicilia-copper transition-colors">Cadre & Architecture</a></li>
+                        <li><a href="carte.html" class="hover:text-sicilia-copper transition-colors">La Carte du Restaurant</a></li>
+                        <li><a href="galerie.html" class="hover:text-sicilia-copper transition-colors">Galerie de Photos</a></li>
+                        <li><a href="reservation.html" class="hover:text-sicilia-copper transition-colors">Réservation en Ligne</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-sicilia-ivory mb-4">Mentions de Prototype NEXID</h4>
+                    <p class="text-[11px] leading-relaxed mb-3">
+                        Ce site web constitue un prototype de présentation développé par <strong class="text-sicilia-copper">NEXID — Nouvelle Identité</strong>.
+                    </p>
+                    <p class="text-[10px] text-sicilia-gray">
+                        Toutes les données informatives restent sujettes à confirmation officielle par le restaurant Sicilia.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+                <p>&copy; 2026 Sicilia Ristorante. Tous droits réservés.</p>
+                <p class="text-sicilia-copper">Conception & Démonstration : <span class="font-bold">NEXID</span></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
